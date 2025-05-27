@@ -258,12 +258,27 @@ footer a {
     margin: 2rem auto;
   }
 
-  .section {
-    max-width: 900px;
-    margin: auto;
-  }
+  .cta {
+  background-color: white;
+  margin: 3rem auto;
+  padding: 3rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 800px;
+}
 
-  footer {
+.cta h3 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta .btn-primary {
+  display: inline-block;
+}
+
+ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -325,10 +340,10 @@ footer a {
   </p>
    </div>
 </secion> 
-<secion class="section"> 
-    <h3>Ready To Build Your Community?</h3>
-  <button class="hero-button"> Get Started For Free </button>
-</secion> 
+<section class="section cta">
+  <h3>Ready To Build Your Community?</h3>
+  <button class="btn-primary">Get Started For Free</button>
+</section>
   <footer>
     <h2>Huddle</h2>
     <p> Lorem ipsum aliqua</p>
