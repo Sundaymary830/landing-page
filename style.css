@@ -1,3 +1,4 @@
+
 /* === Import Fonts === */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
 
@@ -25,6 +26,18 @@ body {
   color: var(--very-dark-cyan);
   line-height: 1.6;
 }
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--very-pale-cyan);
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
 
 img {
   max-width: 100%;
@@ -46,17 +59,21 @@ img {
 .hero-container img {
   margin: 0 auto 1rem;
 }
-
 .btn-primary {
-  background-color: var(--pink);
+  background-color: hsl(322, 100%, 66%);
   color: white;
-  border: none;
   padding: 0.75rem 2rem;
+  border: none;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
   font-family: var(--body-font);
-  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: hsl(322, 100%, 75%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
 }
 
 .hero.section {
@@ -98,18 +115,48 @@ img {
 /* === Cards === */
 .card {
   background-color: white;
-  margin: 2rem 1rem;
-  padding: 2rem;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.card h3 {
-  font-family: var(--heading-font);
-  font-weight: 600;
-  margin: 1.5rem 0 0.5rem;
+.card img {
+  max-width: 100%;
 }
+
+.card-content h3 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  color: var(--grayish-blue);
+}
+
+/* Desktop and tablet layout */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .card.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .card-image, .card-content {
+    flex: 1;
+    padding: 0 2rem;
+  }
+}
+
 
 .card p {
   color: var(--grayish-blue);
@@ -133,6 +180,8 @@ footer {
   color: white;
   padding: 3rem 1.5rem;
   text-align: left;
+  max-width: 1440px;
+  margin: auto;
 }
 
 footer h2 {
@@ -202,12 +251,27 @@ footer a {
     margin: 2rem auto;
   }
 
-  .section {
-    max-width: 900px;
-    margin: auto;
-  }
+  .cta {
+  background-color: white;
+  margin: 3rem auto;
+  padding: 3rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 800px;
+}
 
-  footer {
+.cta h3 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta .btn-primary {
+  display: inline-block;
+}
+
+ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -217,4 +281,19 @@ footer a {
     flex: 1;
     min-width: 200px;
   }
+
+  .footer-links a:hover {
+  text-decoration: underline;
+  color: var(--pink); /* hsl(322, 100%, 66%) */
 }
+  .social-icons a:hover i {
+  color: var(--pink);
+  transform: scale(1.2);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+  .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+    }
