@@ -17,7 +17,7 @@ This is a solution to the [Huddle landing page with alternating feature blocks c
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
-This Challenge was to build a responsive landing page for Huddle, a fictional service that helps users build communities. the key goals wer to:
+This Challenge was to build a responsive landing page for Huddle, a fictional service that helps users build communities. The key goals were to:
 - Build a responsive layout that adapts seamlessly between mobile (375px) and desktop (1440px)
 - implement alternating features section with side-by-side layouts on larger screens 
 - create accessible markup, including alt text, semantic HTML, and keyboard navigation
